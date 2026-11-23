@@ -1,0 +1,10 @@
+# Core (Python 3.10 - 3.13)
+# Qt for Python. The 'Essentials' package holds QtCore, QtGui and QtWidgets, which is all this app uses, and
+# downloads much faster than the full PySide6 package. The import name is still PySide6.
+PySide6-Essentials>=6.6
+# OpenCV 4.x on purpose: the face models used here are the fixed-shape 2023/2021 releases from the OpenCV Zoo.
+opencv-python-headless>=4.8,<5
+numpy>=1.24
+
+# Optional: phone / book / laptop detection in exam mode (large download, uses PyTorch)
+ultralytics>=8.3
