@@ -1,0 +1,58 @@
+{
+  "name": "zhaevaah-backend",
+  "version": "1.0.0",
+  "description": "ZHAEVAAH Fine Jewellery REST API with Prisma, Google Auth, Razorpay, and Email Notifications",
+  "main": "dist/server.js",
+  "scripts": {
+    "predev": "node scripts/switch-db.js",
+    "dev": "tsx watch src/server.ts",
+    "prebuild": "node scripts/switch-db.js",
+    "build": "tsc",
+    "prestart": "node scripts/switch-db.js",
+    "start": "node dist/server.js",
+    "db:switch": "node scripts/switch-db.js",
+    "db:generate": "npx prisma generate",
+    "db:seed": "tsx src/seed.ts"
+  },
+  "keywords": [
+    "zhaevaah",
+    "jewellery",
+    "ecommerce",
+    "prisma",
+    "razorpay",
+    "express"
+  ],
+  "author": "ZHAEVAAH",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^6.4.1",
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "google-auth-library": "^9.15.0",
+    "helmet": "^8.0.0",
+    "imagekit": "^6.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.10.0",
+    "razorpay": "^2.9.5",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/morgan": "^1.9.9",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^20.17.19",
+    "@types/nodemailer": "^6.4.17",
+    "prisma": "^6.4.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  }
+}
